@@ -35,8 +35,11 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #faf4e8   ;
     width: 100vw;
     height: 80px;
+    position: sticky;
+    top: 0px;
 }
 
 #liens {
@@ -129,6 +132,22 @@ main > div {
     text-decoration-color: #52B788;
 }
 
+h2 {
+    font-size: 44px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
 #grid {
     width: 70%;
     display: flex;
@@ -141,11 +160,45 @@ main > div {
 .card {
     display: flex;
     margin-bottom: 24px;
+    background: center / cover url("https://picsum.photos/200/300"); /* Image de projet par Alexandre Tachau */
+    width: 400px;
+    height: 200px;
+    transition: transform 0.15s ease-out 0s;
 }
 
 .card > a > img {
     width: 300px;
     height: 200px;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover > .hide {
+    display: flex;
+    opacity: 1;
+}
+
+.card_infos {
+    flex-direction: column;
+    position: absolute;
+    padding: 16px;
+    bottom: 0px;
+    transition: opacity 0.8s ease-out 0s;
+}
+
+.card_infos > h5 {
+    text-transform: uppercase;
+}
+.card_infos > * {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
 }
 
 footer {
@@ -158,6 +211,23 @@ footer {
     background-color: #211a19;
 }
 
-footer p, footer h1 {
+footer * {
     color: #faf4e8;
+}
+
+#footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+}
+
+#footer_content_name {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #211a19;
 }
