@@ -26,6 +26,10 @@ body {
     background-color: #faf4e8;
 }
 
+body > div {
+    width: 100vw;
+}
+
 p {
     font-size: 20px;
 }
@@ -52,6 +56,7 @@ h6 {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Cache-misère, la page dépasse un peu de 100vw */
 }
 
 nav {
@@ -122,9 +127,10 @@ main {
     align-items: center;
 }
 
-main > div {
+main > div, main > section {
     margin-top: 64px;
     margin-bottom: 32px;
+    max-width: 100vw;
 }
 
 #projet_infos {
@@ -143,7 +149,7 @@ main > div {
 
 #projet_infos_disposition {
     width: 80%;
-    height: 200px;
+    height: 160px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -175,7 +181,7 @@ main > div {
 
 #projet_categories > h4 {
     color:#211a19;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 17px;
     margin-left: 16px;
     background-color: #56B88A;
@@ -193,9 +199,34 @@ main > div {
 
 #projet_client > img {
     border-radius: 50%;
-    width: 64px;
+    width: 48px;
+    height: 48px;
     margin-right: 16px
 }
+
+#projet_client a {
+    text-decoration-line: none ;
+}
+
+#projet_client a:hover {
+    text-decoration-line: underline ;
+}
+
+#section1 {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0px
+}
+
+#section1 > video {
+    width: 480px;
+    height: 480px;
+}
+
 
 .hello_inline {
     display: inline;
@@ -274,21 +305,9 @@ main > div {
     text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
 }
 
-#button_more {
-    
-}
-
-#button_more > a {
-    color:#faf4e8;
-    text-decoration-line: none ;
-    background-color: #211a19;
-    border: 20px solid #211a19;
-    border-radius: 16px;
-}
-
 #projet_fin {
-    width: 100vw;
-    height: 240px;
+    width: 100%;
+    height: 200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -299,6 +318,7 @@ main > div {
 
 #projet_fin_disposition {
     width: 80%;
+    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -307,6 +327,21 @@ main > div {
 
 #projet_fin_disposition * {
     color:#faf4e8
+}
+
+#button_more > a {
+    color:#211a19;
+    font-weight: 600;
+    text-decoration-line: none ;
+    background-color: #56B88A;
+    border: 20px solid #56B88A;
+    border-radius: 16px;
+    transition: background-color 0.15s ease-out 0s, border-color 0.15s ease-out 0s;
+}
+
+#button_more:hover > a {
+    background-color: #66d2a0;
+    border-color: #66d2a0;
 }
 
 #contact {

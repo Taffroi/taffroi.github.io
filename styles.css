@@ -48,6 +48,7 @@ h6 {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Cache-misère, la page dépasse un peu de 100vw */
 }
 
 nav {
@@ -198,6 +199,10 @@ main > div {
     background: center / cover url("projets/moonflakes/cover.webp"); /* Image de projet par Alexandre Tachau */
 }
 
+#grid_card_3 {
+    background: center / cover url("projets/drowned/cover.webp"); /* Image de projet par Alexandre Tachau */
+}
+
 .hide {
     display: none;
     opacity: 0;
@@ -232,12 +237,8 @@ main > div {
 }
 
 .card_infos > * {
-    color: white;
+    color: #faf4e8;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
-}
-
-#button_more {
-    
 }
 
 #button_more > a {
@@ -246,6 +247,12 @@ main > div {
     background-color: #211a19;
     border: 20px solid #211a19;
     border-radius: 16px;
+    transition: background-color 0.15s ease-out 0s, border-color 0.15s ease-out 0s;
+}
+
+#button_more:hover > a {
+    background-color: #322826;
+    border-color: #322826;
 }
 
 #contact {
