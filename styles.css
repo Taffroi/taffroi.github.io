@@ -241,6 +241,26 @@ main > div {
     text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
 }
 
+.card_category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card_category > h6 {
+    color:#211a19;
+    font-weight: 600;
+    font-size: 12px;
+    background-color: #56B88A;
+    border: 2px solid #56B88A;
+    margin-right: 6px;
+    margin-top: 8px;
+    padding: 1px 8px;
+    border-radius: 20px;
+}
+
 #button_more > a {
     color:#faf4e8;
     text-decoration-line: none ;

@@ -42,6 +42,10 @@ h2 {
     font-size: 44px;
 }
 
+h3 {
+    font-size: 38px;
+}
+
 h4 {
     font-size: 32px;
 }
@@ -164,6 +168,10 @@ main > div, main > section {
     align-items: flex-start;
 }
 
+#projet_titre > h3 {
+    font-size: 20px;
+}
+
 #projet_misc {
     height: 100px;
     display: flex;
@@ -216,21 +224,28 @@ main > div, main > section {
     width: 70%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
     margin-top: 0px
 }
 
 #section1 > video {
     width: 480px;
     height: 480px;
+    border-radius: 16px;
+}
+
+#section1_text {
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 48px;
 }
 
 
-.hello_inline {
+.inline {
     display: inline;
-    font-size: 60px;
 }
 
 .underline_green {
