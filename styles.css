@@ -150,10 +150,13 @@ main > div {
 }
 
 #presentation_domaines > h3 {
-    color:#faf4e8;
-    background-color: #211a19;
-    border: 10px solid #211a19;
-    border-radius: 8px;
+    color:#211a19;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #56B88A;
+    border: 2px solid #56B88A;
+    padding: 6px 20px;
+    border-radius: 28px;
 }
 
 .hello_inline {
@@ -192,7 +195,7 @@ main > div {
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #grid_card_4 {
@@ -201,6 +204,10 @@ main > div {
 
 #grid_card_3 {
     background: center / cover url("projets/drowned/cover.webp"); /* Image de projet par Alexandre Tachau */
+}
+
+#grid_card_2 {
+    background: center / cover url("projets/escale/cover.webp"); /* Image de projet par Alexandre Tachau */
 }
 
 .hide {
@@ -215,7 +222,7 @@ main > div {
     border-radius: 0px 0px 16px 16px;
     position: absolute;
     bottom: 0px;
-    transition: opacity 1s ease-out 0s;
+    transition: opacity 1s ease 0s;
     opacity: 0
 }
 
@@ -247,6 +254,7 @@ main > div {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 4px;
 }
 
 .card_category > h6 {
