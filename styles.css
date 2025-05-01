@@ -37,8 +37,16 @@ p {
     font-size: 20px;
 }
 
+h1 {
+    font-size: 60px;
+}
+
 h2 {
     font-size: 44px;
+}
+
+h3 {
+    font-size: 38px;
 }
 
 h4 {
@@ -168,7 +176,6 @@ main > div {
 
 .hello_inline {
     display: inline;
-    font-size: 60px;
 }
 
 .underline_green {
@@ -194,6 +201,7 @@ main > div {
     margin-bottom: 24px;
     background: center / cover url("https://picsum.photos/200/300"); /* Image placeholder par Lorem Picsum */
     width: 330px;
+    height: 330px;
     transition: transform 0.15s ease-out 0s;
     background-color: #211a19;
     border-radius: 16px;
@@ -207,6 +215,7 @@ main > div {
     justify-content: flex-end;
     width: inherit;
     height: inherit;
+    border-radius: inherit;
     opacity: 0;
     transition: opacity 0.15s ease-out 0s;
 }
@@ -215,7 +224,7 @@ main > div {
     width: inherit;
     height: inherit;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: inherit;
     transition: opacity 0.15s ease-out 0s;
     position: absolute;
     z-index: -1;
@@ -265,7 +274,7 @@ main > div {
 
 .card_infos > * {
     color: #faf4e8;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 2px #211a1950;
 }
 
 .card_category {
@@ -287,6 +296,7 @@ main > div {
     margin-top: 8px;
     padding: 1px 8px;
     border-radius: 20px;
+    text-shadow: none;
 }
 
 #button_more > a {
@@ -308,10 +318,71 @@ main > div {
     height: 300px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #211a19;
+    border-radius: 16px;
+    margin-bottom: 64px;
+}
+
+#contact_text * {
+    color: #faf4e8;
+}
+
+#contact_reseaux > * {
+    color: #faf4e8;
+}
+
+#contact_disposition {
+    height: 260px;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: #211a19;
+    padding: 32px 48px;
+}
+
+#contact_disposition > img {
+    width: 216px;
+    height: 216px;
+    object-fit: cover;
     background-color: #56B88A;
+    border-radius: 50%;
+}
+
+#contact_text {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: inherit;
+}
+
+#contact_reseaux {
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: inherit;
+}
+
+.button > a {
+    color:#211a19;
+    font-weight: 600;
+    text-decoration-line: none ;
+    background-color: #56B88A;
+    border: 20px solid #56B88A;
     border-radius: 16px;
+    transition: background-color 0.15s ease-out 0s, border-color 0.15s ease-out 0s;
+}
+
+.button:hover > a {
+    background-color: #66d2a0;
+    border-color: #66d2a0;
 }
 
 footer {
