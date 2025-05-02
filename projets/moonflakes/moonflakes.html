@@ -17,12 +17,13 @@
         <nav>
             <div id="liens">
                 <div id="logo">
-                    <a href="../../index.html"><img src="https://picsum.photos/200" alt="Logo par Alexandre Tachau"></a>
+                    <a href="../../index.html"><img src="../../icon.png" alt="Stellar icons created by meaicon - Flaticon"></a>
                     <a href="../../index.html" class="nav_a caprasimo-regular">A. TACHAU</a>
                 </div>
                 <div id="pages">
-                    <a href="../../index.html#projets" class="nav_a">Projets</a>
-                    <a href="../../index.html" class="nav_a">Contact</a>
+                    <a href="#projets" class="nav_a" id="nav_button_projets">Projets</a>
+                    <a href="showreel.html" id="nav_button_showreel" class="nav_a">Showreel</a>
+                    <a href="#contact" class="nav_a" id="nav_button_contact">Contact</a>
                 </div>
             </div>
         </nav>
@@ -46,46 +47,150 @@
                     </div>
                 </div>
             </div>
-            <section id="section1">
-                <video width="1080" height="1080" preload="metadata" controls autoplay="true" loop="true" poster muted="true">
-                    <source src="video.webm" type="video/webm">
-                    <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="myVideo.webm">un lien pour télécharger la vidéo</a>.</p>
-                </video>
-                <div id="section1_text">
+            <section class="section_highlight">
+                <div class="section_video">
+                    <video width="1080" height="1080" preload="metadata" controls autoplay="true" loop="true" poster muted="true">
+                        <source src="video.webm" type="video/webm">
+                        <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="video.webm">un lien pour télécharger la vidéo</a>.</p>
+                    </video>
+                </div>
+                <div class="section_text">
                     <div>
                         <h3 class="caprasimo-regular inline">Une publicité en </h3><h3 class="caprasimo-regular inline underline_green">0 gravité</h3>
                     </div>
                     <p>Le but était de réaliser une publicité fictive en animation qui correspond au projet de mon client : engageante par ses effets visuels, et rappelant au jeune public l'espace, tout en respectant la direction artistique du produit et en innovant sur celle-ci.
-                    <br><br>caca</p>
+                    <br><br></p>
                     <div class="info_time">
                         <p class="underline_green"><span class="material-symbols-rounded">timer</span>2 semaines</p>
                     </div>
                 </div>
             </section>
-            <div id="button_more"><a href="#">En voir plus</a></div>
-            <div>
-                <h2 class="caprasimo-regular underline_green">Intéressé ?</h1>
-            </div>
+            <section class="section_image">
+                <div class="row_3">
+                    <label class="modal">
+                        <input type="checkbox">
+                        <div class="modal-container">
+                            <div class="modal-content">
+                                <video width="432" height="432" controls preload="metadata" autoplay="true" loop="true" poster muted="true" class="showcase">
+                                    <source src="showcase_personnage.webm" type="video/webm">
+                                    <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="showcase_personnage.webm">un lien pour télécharger la vidéo</a>.</p>
+                                </video>
+                            </div>
+                        </div>
+                        <video width="432" height="432" preload="metadata" autoplay="true" loop="true" poster muted="true" class="modal-button showcase first">
+                            <source src="showcase_personnage.webm" type="video/webm">
+                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="showcase_personnage.webm">un lien pour télécharger la vidéo</a>.</p>
+                        </video>
+                    </label>
+                    <label class="modal">
+                        <input type="checkbox">
+                        <div class="modal-container">
+                            <div class="modal-content">
+                                <video width="432" height="432" controls preload="metadata" autoplay="true" loop="true" poster muted="true" class="showcase">
+                                    <source src="showcase_craque.webm" type="video/webm">
+                                    <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="showcase_craque.webm">un lien pour télécharger la vidéo</a>.</p>
+                                </video>
+                            </div>
+                        </div>
+                        <video width="432" height="432" preload="metadata" autoplay="true" loop="true" poster muted="true" class="modal-button showcase">
+                            <source src="showcase_craque.webm" type="video/webm">
+                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="showcase_craque.webm">un lien pour télécharger la vidéo</a>.</p>
+                        </video>
+                    </label>
+                    <label class="modal">
+                        <input type="checkbox">
+                        <div class="modal-container">
+                            <div class="modal-content">
+                                <video width="432" height="432" controls preload="metadata" autoplay="true" loop="true" poster muted="true" class="showcase">
+                                    <source src="showcase_boite3d.webm" type="video/webm">
+                                    <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="showcase_boite3d.webm">un lien pour télécharger la vidéo</a>.</p>
+                                </video>
+                            </div>
+                        </div>
+                        <video width="432" height="432" preload="metadata" autoplay="true" loop="true" poster muted="true" class="modal-button showcase last">
+                            <source src="showcase_boite3d.webm" type="video/webm">
+                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="showcase_boite3d.webm">un lien pour télécharger la vidéo</a>.</p>
+                        </video>
+                    </label>
+                </div>
+                <label class="modal">
+                    <input type="checkbox">
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <video width="768" height="320" controls preload="metadata" autoplay="true" loop="true" poster muted="true" class="showcase">
+                                <source src="showcase_fusee.webm" type="video/webm">
+                                <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="myVideo.webm">un lien pour télécharger la vidéo</a>.</p>
+                            </video>
+                        </div>
+                    </div>
+                    <video width="768" height="320" preload="metadata" autoplay="true" loop="true" poster muted="true" class="modal-button showcase banner">
+                        <source src="showcase_fusee.webm" type="video/webm">
+                        <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="myVideo.webm">un lien pour télécharger la vidéo</a>.</p>
+                    </video>
+                </label>
+            </section>
+            <section class="section_highlight">
+                <div class="section_video relative">
+                    <video width="1080" height="1080" preload="metadata" controls autoplay="true" loop="true" poster muted="true">
+                        <source src="moonflakes_sound_design.webm" type="video/webm">
+                        <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici <a href="moonflakes_sound_design.webm">un lien pour télécharger la vidéo</a>.</p>
+                    </video>
+                    <img class="deco_active_son" src="deco_active_son.png" alt="Image pour activer le son par Alexandre Tachau">
+                </div>
+                <div class="section_text">
+                    <div>
+                        <h3 class="caprasimo-regular inline">Du </h3><h3 class="caprasimo-regular inline underline_green">sound design</h3>
+                    </div>
+                    <p>Chaque son a été placé afin de ressortir le côté cartoon et spatial de la boîte de céréales !
+                    <br><br></p>
+                </div>
+            </section>
+            <section class="section_image">
+                <label class="modal">
+                    <input type="checkbox">
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <img class="showcase" src="showcase_banner_moonflakes.png" alt="Image pour activer le son par Alexandre Tachau">
+                        </div>
+                    </div>
+                    <img class="modal-button showcase banner" src="showcase_banner_moonflakes.png" alt="Image pour activer le son par Alexandre Tachau">
+                </label>
+                <label class="modal">
+                    <input type="checkbox">
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <img class="showcase banner" src="showcase_banner_crunchky.png" alt="Image pour activer le son par Alexandre Tachau">
+                        </div>
+                    </div>
+                    <img class="modal-button showcase banner" src="showcase_banner_crunchky.png" alt="Image pour activer le son par Alexandre Tachau">
+                </label>
+            </section>
             <div id="projet_fin">
                 <div id="projet_fin_disposition">
                     <h2 class="caprasimo-regular">Merci d'avoir regardé !</h2>
-                    <div id="button_more"><a href="#">Voir d'autres projets</a></div>
+                    <div id="button_more"><a href="../../index.html#projets">Voir d'autres projets</a></div>
                 </div>
             </div>
         </main>
         <footer>
-            <div>
-                <div id="footer_content">
-                    <div id="footer_content_name">
-                        <h4 class="caprasimo-regular">Alexandre TACHAU</h4>
-                        <p>Motion Designer - Monteur vidéo - Infographiste</p>
-                    </div>
-                    <div id="footer_content_links">
-                        <h5 class="caprasimo-regular">Contact</h1>
-                    </div>
+            <div id="footer_content">
+                <div id="footer_content_name">
+                    <h4 class="caprasimo-regular">Alexandre TACHAU</h4>
+                    <p>Motion Designer - Monteur vidéo - Infographiste</p>
+                </div>
+                <div class="footer_content_links">
+                    <h5 class="caprasimo-regular">Projets</h1>
+                    <a href="download/cv_alexandre_tachau.pdf" download="cv_alexandre_tachau">Moonflakes</a>
+                </div>
+                <div class="footer_content_links">
+                    <h5 class="caprasimo-regular">Contact</h1>
+                    <a href="download/cv_alexandre_tachau.pdf" download="cv_alexandre_tachau">Voir le CV</a>
+                    <a href="mailto:alexandretachau@gmail.com">Envoyer un mail</a>
                 </div>
             </div>
-            <p>2025 - Tous droits réservés à un usage personnel.</p>
+            <p>Crédits à <a href="https://www.instagram.com/yuko.lele?igsh=MWZoZHg3Yjkxd3p0cg==">Yukosmile</a>, <a href="https://moonky.space/">Moonky</a>, <a href="http://patrimoine-maritime.com/">FRCPM</a>.
+            <br><br><a href="https://www.flaticon.com/free-icons/stellar" title="stellar icons">Stellar icons created by meaicon - Flaticon</a>
+            <br><br>2025 - Tous droits réservés à un usage personnel.</p>
         </footer>
     </body>
 </html>
