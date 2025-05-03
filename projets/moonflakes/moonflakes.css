@@ -56,6 +56,8 @@ u {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    width: auto;
+    height: auto;
   }
   
 .modal .modal-button {
@@ -89,8 +91,6 @@ u {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 30vw;
-  min-height: 30vh;
   max-width: 80vw;
   max-height: 70vh;
   background-color: rgba(242, 242, 242, 0.9);
@@ -320,7 +320,7 @@ main > div, main > section {
 }
 
 .section_video {
-    width: 480px;
+    width: 32vw;
     border-radius: 16px;
 }
 
@@ -332,9 +332,9 @@ main > div, main > section {
 
 .deco_active_son {
     position: absolute;
-    bottom: -8%;
-    right: -14%;
-    filter:drop-shadow(-1px -2px 0px #faf4e8);
+    bottom: -5%;
+    right: -36%;
+    rotate: -7deg;
 }
 
 .section_text {
@@ -355,54 +355,40 @@ main > div, main > section {
 
 .section_image {
     width: 100%;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 32px 15%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: #211a19;
+}
+
+.section_image > .div_row {
+    width: inherit
 }
 
 .wrap {
     flex-wrap: wrap;
 }
 
-.row_3 {
-    width: inherit;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.div_row .showcase {
+    width: calc(70vw / 3.2);
+    height: calc(70vw / 3.2);
+    object-fit: cover;
 }
 
-.row_3 .showcase {
-    width: 360px;
-    height: 360px;
+.gap {
+    gap: 24px
 }
 
 .showcase {
     transition: all 0.15s ease-out 0s;
     border-radius: 16px;
-    margin: 10px;
-    padding: 0;
-    max-width: 80vw;
-}
-
-.first { /* code bullshit ? le .showcase:first-of-class existe pas alors..*/
-    margin-left: 0px;
-}
-
-.last { /* code bullshit ? le .showcase:last-of-class existe pas alors..*/
-    margin-right: 0px;
 }
 
 .banner {
     width: 70vw;
     height: 200px;
     object-fit: cover;
-    margin-left: 0px;
-    margin-right: 0px;
     flex: 1 1 auto
 }
 
@@ -683,7 +669,10 @@ footer * {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        column-gap: 8px;
+    }
+
+    .div_row.mobile {
+        flex-direction: row;
     }
 
     #project_info > .div_row {
@@ -741,8 +730,34 @@ footer * {
         height: auto;
     }
 
-    .row_3 {
-        flex-direction: column;
+    .section_image {
+        padding: 24px 3%;
+    }
+
+    .gap {
+        gap: 12px;
+    }
+
+    .section_image > .div_row {
+        width: 92vw
+    }
+
+    .div_row .showcase {
+        width: 27vw;
+        height: 27vw;
+    }
+
+    .banner {
+        width: 92vw;
+        height: 120px;
+        object-fit: cover;
+        flex: 1 1 auto
+    }
+
+    .deco_active_son {
+        bottom: -40px;
+        right: 0%;
+        rotate: -3deg;
     }
 
     #button_more {
