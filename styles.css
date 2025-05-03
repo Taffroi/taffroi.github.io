@@ -196,6 +196,7 @@ main > div {
 #presentation_img > img {
     height: inherit;
     filter:drop-shadow(10px 5px 0px #bcb3a1);
+    padding: 16px 0;
     position: relative;
 }
 
@@ -208,7 +209,7 @@ main > div {
     z-index: -1;
     animation: 60s linear 0s infinite circle_rotation;
     top: 80px;
-    right: 58px;
+    right: 46px;
 }
 
 #presentation_text {
@@ -646,7 +647,7 @@ footer * {
         border: 5px dashed #bcb3a1;
         animation: 60s linear 0s infinite circle_rotation;
         top: 40px;
-        right: 16px;
+        right: 0px;
     }
 
     #presentation_text {
