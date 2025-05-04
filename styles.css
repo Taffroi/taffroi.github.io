@@ -611,13 +611,13 @@ PAGES DE PROJET
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
 }
 
 #project_client > img {
     border-radius: 50%;
     width: 48px;
     height: 48px;
-    margin-right: 16px
 }
 
 #project_client a {
@@ -640,13 +640,15 @@ PAGES DE PROJET
 
 .section_video {
     max-width: 34vw;
+    max-height: 70vh;
     border-radius: 16px;
 }
 
 .section_video > video, .section_video > iframe {
     width: inherit;
     height: inherit;
-    max-height: 70vh;
+    max-width: inherit;
+    max-height: inherit;
     border-radius: inherit;
     object-fit: contain;
 }
@@ -1134,10 +1136,13 @@ footer * {
         flex-wrap: wrap;
     }
 
+    #project_client {
+        gap: 8px;
+    }
+
     #project_client > img {
         width: 36px;
         height: 36px;
-        margin-right: 0
     }
 
     #project_client a {
