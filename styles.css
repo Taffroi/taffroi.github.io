@@ -2,7 +2,6 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    color: #211a19;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -13,6 +12,10 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden; /* Cache-misère, la page dépasse un peu de 100vw */
     scroll-padding-top: 80px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: #211a19;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
     user-select: none;
     margin-right: 10px;
     position: relative;
-    top: 6px;
+    top: 5px;
     transform: scale(1.2);
 }
 
@@ -56,6 +59,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .text_center {
     text-align: center;
+}
+
+.mobile_none {
+    display: initial;
+}
+
+.mobile_only {
+    display: none;
+}
+
+.inline {
+    display: inline;
 }
 
 .modal {
@@ -221,6 +236,7 @@ nav {
 .nav_a {
     font-size: 20px;
     text-decoration-line: none;
+    color: #211a19;
 }
 
 #logo {
@@ -255,6 +271,10 @@ main {
     align-items: center;
 }
 
+main > *:last-child {
+    margin-bottom: 64px;
+}
+
 main > div, main > section {
     max-width: 100%;
 }
@@ -276,7 +296,7 @@ main > .button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0px;
+    gap: 32px;
 }
 
 #presentation_text_title * {
@@ -301,11 +321,12 @@ main > .button {
 
 #presentation_text {
     width: 58%;
-    height: 340px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 36px;
 }
 
 #presentation_domaines {
@@ -351,6 +372,7 @@ u {
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
+    gap: 24 px
 }
 
 #grid a{
@@ -359,15 +381,14 @@ u {
 
 .card {
     display: flex;
-    margin-bottom: 24px;
     background: center / cover url("https://picsum.photos/200/300"); /* Image placeholder par Lorem Picsum */
-    width: 330px;
-    height: 330px;
+    width: 21vw;
+    height: 21vw;
     transition: transform 0.15s ease-out 0s;
     background-color: #211a19;
     border-radius: 16px;
     aspect-ratio: 1/1;
-    margin: 10px;
+    flex: 1 0 33%;
 }
 
 .card_focus {
@@ -457,24 +478,15 @@ u {
 
 #contact {
     width: 70%;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #211a19;
     border-radius: 16px;
-    margin-bottom: 64px;
-}
-
-#contact_disposition {
-    height: 280px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #211a19;
     padding: 32px 48px;
+    gap: 64px;
 }
 
 .contact_photo_alex {
@@ -485,19 +497,12 @@ u {
     border-radius: 50%;
 }
 
-#contact_text > .contact_photo_alex {
-    display: none;
-}
-
 #contact_text {
     height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: inherit;
-    padding-bottom: inherit;
-    padding-left: 48px;
 }
 
 #contact_text h2, #contact_text p, #contact_text u, #contact_text b  {
@@ -723,56 +728,32 @@ PAGES DE PROJET
     flex: 1 1 auto
 }
 
-.info_time {
-    display: flex;
+.stats {
     color:#faf4e8;
+    font-weight: 600;
     text-decoration-line: none;
     background-color: #211a19;
-    border: 6px solid #211a19;
-    padding: 6px 24px 12px 16px; /* code pourri pour contourner l'icône mal positionnée */
+    padding: 14px 22px;
     border-radius: 32px;
-    transition: background-color 0.15s ease-out 0s, border-color 0.15s ease-out 0s;
 }
 
-.info_time * {
-    color:#faf4e8;
+.stats.icon {
+    padding: 13px 26px 17px 20px; /* code pourri pour contourner l'icône mal positionnée */
 }
 
-
-.inline {
-    display: inline;
-}
-
-#grid {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#projet_fin {
+#project_bottom {
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #211a19;
-    margin-bottom: 0px;
-}
-
-#projet_fin_disposition {
-    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: #211a19;
+    padding: 32px 10%;
+    margin-bottom: 0px;
 }
 
-#projet_fin_disposition > h2 {
+#project_bottom > h2 {
     color:#faf4e8
 }
 
@@ -864,6 +845,7 @@ CSS : MOBILE + TABLETTES
     html {
         scroll-padding-top: 56px;
     }
+
     p {
         font-size: 14px;
     }
@@ -890,6 +872,18 @@ CSS : MOBILE + TABLETTES
     
     h6 {
         font-size: 12px;
+    }
+
+    .mobile_none {
+        display: none;
+    }
+
+    .mobile_only {
+        display: initial;
+    }
+
+    .stats.icon {
+        padding: 8px 26px 16px 19px; /* code pourri pour contourner l'icône mal positionnée */
     }
 
     nav {
@@ -973,13 +967,11 @@ CSS : MOBILE + TABLETTES
         flex-direction: column-reverse;
         justify-content: space-between;
         align-items: center;
-        margin-top: 0px;
+        gap: 0px;
     }
 
     #button_voir_projet {
         display: block;
-        margin-top: 12px;
-        margin-bottom: 18px;
     }
 
     #presentation_img {
@@ -1003,14 +995,11 @@ CSS : MOBILE + TABLETTES
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        gap: 16px;
     }
 
     #presentation_text * {
         text-align: center;
-    }
-
-    #presentation_text p {
-        margin-bottom: 10px;
     }
 
     #presentation_text_title * {
@@ -1078,31 +1067,13 @@ CSS : MOBILE + TABLETTES
         height: auto;
         flex-direction: column;
         border-radius: 16px;
+        padding: 16px 24px;
         margin-bottom: 64px;
-    }
-
-    #contact_disposition {
-        display: flex;
-        height: auto;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 16px;
-        padding: 8px 24px;
-    }
-
-    .contact_photo_alex {
-        padding-left: 0px
-    }
-
-    #contact_disposition > .contact_photo_alex {
-        display: none;
     }
     
     #contact_text > .contact_photo_alex {
         width: 120px;
         height: 120px;
-        display: block;
     }
 
     #contact_text {
@@ -1111,12 +1082,9 @@ CSS : MOBILE + TABLETTES
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 0
     }
 
     #contact_text * {
-        margin-top: 10px;
-        margin-bottom: 10px;
         text-align: center;
     }
 
@@ -1232,15 +1200,12 @@ CSS : MOBILE + TABLETTES
         bottom: -40px;
         right: 0%;
         rotate: -3deg;
+        transform: scale(0.8);
     }
 
     .button {
         transform: scale(0.9);
         transform-origin: center center;
-    }
-
-    .deco_active_son {
-        transform: scale(0.8);
     }
 
     footer {
