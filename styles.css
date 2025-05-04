@@ -399,7 +399,7 @@ u {
 }
 
 #grid_card_3 {
-    background: center / cover url("projets/drowned/cover.webp"); /* Image de projet par Alexandre Tachau */
+    background: center / cover url("projets/drowning/cover.webp"); /* Image de projet par Alexandre Tachau */
 }
 
 #grid_card_2 {
@@ -552,6 +552,10 @@ PAGES DE PROJET
     color:#faf4e8;
 }
 
+.bg_wip {
+    background-color: #ebeb23;  
+}
+
 .div_row {
     display: flex;
     flex-direction: row;
@@ -581,6 +585,10 @@ PAGES DE PROJET
 
 #project_info *:not(.category) {
     color:inherit;
+}
+
+#project_title {
+    text-transform: uppercase
 }
 
 #project_description {
@@ -631,14 +639,16 @@ PAGES DE PROJET
 }
 
 .section_video {
-    width: 32vw;
+    max-width: 34vw;
     border-radius: 16px;
 }
 
 .section_video > video, .section_video > iframe {
     width: inherit;
     height: inherit;
+    max-height: 70vh;
     border-radius: inherit;
+    object-fit: contain;
 }
 
 .section_video > iframe {
@@ -658,14 +668,7 @@ PAGES DE PROJET
     justify-content: center;
     align-items: center;
     padding: 32px 0px;
-}
-
-.section_text > * {
-    margin-bottom: 1em;
-}
-
-.section_text > *:last-child {
-    margin-bottom: 0;
+    gap: 32px;
 }
 
 .section_image {
@@ -767,13 +770,15 @@ FOOTER
 */
 
 footer {
-    width: 100vw;
-    height: 300px;
+    width: inherit;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #211a19;
+    padding: 48px 0;
+    gap: 24px;
 }
 
 footer * {
@@ -787,7 +792,6 @@ footer * {
     justify-content: space-between;
     align-items: flex-start;
     width: 80vw;
-    padding-top: 24px;
 }
 
 #footer_content_name {
@@ -1143,11 +1147,12 @@ footer * {
     .section_highlight {
         flex-direction: column;
         padding: 24px 3%;
-        gap: 32px;
+        gap: 20px;
     }
 
     .section_text {
         padding: 0;
+        height: auto;
     }
 
     .section_text > h3 {
@@ -1159,11 +1164,7 @@ footer * {
     }
 
     .section_video {
-        width: 92vw;
-    }
-
-    .section_text {
-        height: auto;
+        max-width: 92vw;
     }
 
     .section_image {
@@ -1215,19 +1216,26 @@ footer * {
         padding: 32px 0px;
     }
 
+    footer {
+        align-items: center;
+    }
+
     #footer_content {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: inherit
+        gap: 16px;
     }
 
     #footer_content_name {
         align-items: center;
     }
 
+    #footer_content_name > h4 {
+        font-size: 1.5em;
+    }
+
     .footer_content_links {
         align-items: center;
-        margin-top: 16px;
     }
 }
