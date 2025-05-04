@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.text-center {
+.text_center {
     text-align: center;
 }
 
@@ -235,10 +235,6 @@ nav {
 #logo > a {
     margin-left: 12px;
     font-weight: 700;
-}
-
-iframe {
-    margin-bottom: 84px;
 }
 
 main {
@@ -578,6 +574,11 @@ PAGES DE PROJET
     padding: 24px 15%;
 }
 
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
 #project_info *:not(.category) {
     color:inherit;
 }
@@ -634,10 +635,14 @@ PAGES DE PROJET
     border-radius: 16px;
 }
 
-.section_video > video {
+.section_video > video, .section_video > iframe {
     width: inherit;
     height: inherit;
     border-radius: inherit;
+}
+
+.section_video > iframe {
+    aspect-ratio: 16/9;
 }
 
 .deco_active_son {
