@@ -870,10 +870,14 @@ footer * {
         display: none;
     }
 
-    #logo > a > img {
+    #logo > a {
         width: 32px;
         height: 32px;
-        transition: transform 0.15s ease-out 0s;
+    }
+
+    #logo > a > img {
+        width: inherit;
+        height: inherit;
     }
 
     #liens {
