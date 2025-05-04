@@ -654,6 +654,7 @@ PAGES DE PROJET
 }
 
 .section_video > iframe {
+    width: 34vw;
     aspect-ratio: 16/9;
 }
 
@@ -1170,6 +1171,10 @@ footer * {
 
     .section_video {
         max-width: 92vw;
+    }
+
+    .section_video > iframe {
+        width: 92vw;
     }
 
     .section_image {
