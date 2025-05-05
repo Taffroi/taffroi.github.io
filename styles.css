@@ -372,7 +372,7 @@ u {
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
-    gap: 24 px
+    gap: 24px;
 }
 
 #grid a{
@@ -442,6 +442,11 @@ u {
     border-radius: 0px 0px 16px 16px;
     transition: opacity 1s ease 0s;
     opacity: 1
+}
+
+.card {
+    width: 92vw;
+    height: 92vw;
 }
 
 .card_infos {
