@@ -444,11 +444,6 @@ u {
     opacity: 1
 }
 
-.card {
-    width: 92vw;
-    height: 92vw;
-}
-
 .card_infos {
     flex-direction: column;
     padding: 16px;
@@ -1047,6 +1042,11 @@ CSS : MOBILE + TABLETTES
         justify-content: space-between;
         align-items: center;
         padding: 0px 3%;
+    }
+
+    .card {
+        width: 92vw;
+        height: 92vw;
     }
 
     .card_focus {
