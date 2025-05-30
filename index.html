@@ -15,104 +15,143 @@
     </head>
     <body>
         <nav>
-            <div id="liens">
-                <div id="logo">
+            <div id="nav_container">
+                <div id="logo" class="nav_button_group">
                     <a href="#"><img src="icon.webp" alt="Stellar icons created by meaicon - Flaticon"></a>
-                    <a href="#" class="nav_a caprasimo-regular">A. TACHAU</a>
+                    <a href="#" class="cooper">A. TACHAU</a>
                 </div>
-                <div id="pages">
-                    <a href="#projets" class="nav_a" id="nav_button_projets">Projets</a>
-                    <a href="showreel.html" id="nav_button_showreel" class="nav_a">Showreel</a>
-                    <a href="#contact" class="nav_a" id="nav_button_contact">Contact</a>
+                <div id="nav_button_mid" class="nav_button_group">
+                    <a href="#projets" id="nav_button_projets">Projets</a>
+                    <a href="showreel.html" id="nav_button_showreel">Showreel</a>
+                    <a href="#" id="nav_button_showreel">Qui suis-je ?</a>
+                </div>
+                <div class="nav_button_group">
+                    <a href="#contact" class="btn_nav_primary">
+                        <div class="bnp_text">Contactez-moi</div>
+                        <div class="bnp_hover"></div>
+                    </a>
                 </div>
             </div>
             <div id="nav_blur"></div>
         </nav>
         <main>
-            <div id="presentation">
+            <section id="presentation">
                 <div id="presentation_text">
                     <div id="presentation_text_title">
-                        <h1 class="quicksand-400">Bonjour, je suis</h1>
-                        <h1><u>Alexandre TACHAU</u></h1>
+                        <h1 class="cooper">Le partenaire <u>créatif</u> pour</h1>
+                        <div class="slider_wrapper">
+                            <h1 class="cooper">vos </h1>
+                            <div class="slider">
+                                <h1 class="cooper-bold slider_text">réseaux sociaux</h1>
+                                <h1 class="cooper-bold slider_text">sites web</h1>
+                                <h1 class="cooper-bold slider_text">animations</h1>
+                                <h1 class="cooper-bold slider_text">réseaux sociaux</h1>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="button no_icon rounded" id="button_voir_projet"><a href="#projets">Voir mes réalisations</a></div>
                     <p>Spécialisé en <b>montage vidéo et production audiovisuelle</b>, j'ai travaillé sur des projets variés : <u>publicités en animation</u>, vidéos pour réseaux sociaux, <u>bande-annonces</u>, et plus.</p>
-                    <div id="presentation_domaines" class="div_row">
-                        <h3 class="category">Motion Design</h3>
-                        <h3 class="category">Monteur vidéo</h3>
-                        <h3 class="category">Infographiste</h3>
+                    <div class="hero_cta">
+                        <a href="#projets" class="btn_primary">
+                            <div class="bp_text">Voir les réalisations</div>
+                            <div class="bp_bg"></div>
+                            <div class="bp_hover"></div>
+                        </a>
+                        <a href="#projets" class="btn_secondary">
+                            <!-- <div class="bs_anim_question">?</div> -->
+                            <div class="bs_text">Qui suis-je ?</div>
+                            <div class="bs_hover"></div>
+                        </a>
                     </div>
                 </div>
                 <div id="presentation_img">
                     <img src="alex_dessin.webp" alt="Dessin d'Alexandre Tachau par Yukosmile (Lohan)">
                     <span class="circle_dashed"></span>
                 </div>
-            </div>
+            </section>
+            <section class="client_area">
+                <h4 class="separator relative">J'ai travaillé avec eux...</h4>
+                <div>
+                </div>
+            </section>
             <div>
-                <h2 class="caprasimo-regular separator relative" id="projets">Mes dernières réalisations</h1>
+                <h2 class="separator relative" id="projets">Mes dernières réalisations</h1>
             </div>
-            <div id="grid">
-                <a href="projets/moonflakes/projet.html">
-                    <div class="card" id="grid_card_4">
-                        <div class="card_focus">
-                            <video width="480" height="480" preload="metadata" autoplay loop poster muted>
-                                <source src="projets/moonflakes/cover_video.webm" type="video/webm">
-                            </video>
-                            <div class="card_infos gradient">
-                                <h5>Moonflakes</h5>
-                                <h6 class="quicksand-400">Publicité de céréales fictives</h6>
-                                <div class="card_category">
-                                    <h6 class="category">Motion Design</h6>
-                                    <h6 class="category">Animation 3D</h6>
-                                    <h6 class="category">Graphisme</h6>
-                                </div>
+            <section class="grid">
+                <a href="projets/moonflakes/projet.html" class="card">
+                    <img src="projets/moonflakes/cover.webp" alt="Image de projet par Alexandre Tachau & Moonky">
+                    <div class="card_focus">
+                        <video width="480" height="480" preload="metadata" autoplay loop poster muted>
+                            <source src="projets/moonflakes/cover_video.webm" type="video/webm">
+                        </video>
+                        <div class="card_infos gradient">
+                            <h5 class="cooper-bold">Moonflakes</h5>
+                            <h6 class="quicksand-400">Publicité de céréales fictives</h6>
+                            <div class="card_category">
+                                <h6 class="category">Motion Design</h6>
+                                <h6 class="category">Animation 3D</h6>
+                                <h6 class="category">Graphisme</h6>
                             </div>
                         </div>
                     </div>
                 </a>
-                <a href="projets/drowning/projet.html">
-                    <div class="card" id="grid_card_3">
-                        <div class="card_focus">
-                            <video width="480" height="480" preload="metadata" autoplay loop poster muted>
-                                <source src="projets/drowning/cover_video.webm" type="video/webm">
-                            </video>
-                            <div class="card_infos gradient">
-                                <h5>DROWNING</h5>
-                                <h6 class="quicksand-400">Dessins animés de la BD Tulipe</h6>
-                                <div class="card_category">
-                                    <h6 class="category">Motion Design</h6>
-                                    <h6 class="category">Composition</h6>
-                                    <h6 class="category">Animation</h6>
-                                </div>
+                <a href="projets/drowning/projet.html" class="card">
+                    <img src="projets/drowning/cover.webp" alt="Image du projet d'animation Tulipe par Alexandre Tachau & Julia Bianconi">
+                    <div class="card_focus">
+                        <video width="480" height="480" preload="metadata" autoplay loop poster muted>
+                            <source src="projets/drowning/cover_video.webm" type="video/webm">
+                        </video>
+                        <div class="card_infos gradient">
+                            <h5 class="cooper-bold">DROWNING</h5>
+                            <h6 class="quicksand-400">Dessins animés de la BD Tulipe</h6>
+                            <div class="card_category">
+                                <h6 class="category">Motion Design</h6>
+                                <h6 class="category">Composition</h6>
+                                <h6 class="category">Animation</h6>
                             </div>
                         </div>
                     </div>
                 </a>
-                <a href="projets/escale/projet.html">
-                    <div class="card" id="grid_card_2">
-                        <div class="card_focus">
-                            <video width="480" height="480" preload="metadata" autoplay loop poster muted>
-                                <source src="projets/escale/cover_video.webm" type="video/webm">
-                            </video>
-                            <div class="card_infos gradient">
-                                <h5>ESCALE à Calais</h5>
-                                <h6 class="quicksand-400">L'évenement maritime de Calais</h6>
-                                <div class="card_category">
-                                    <h6 class="category">Événementiel</h6>
-                                    <h6 class="category">Montage vidéo</h6>
-                                    <h6 class="category">Logo animé</h6>
-                                </div>
+                <a href="projets/escale/projet.html" class="card">
+                    <img src="projets/escale/cover.webp" alt="Image du projet Escale par Alexandre Tachau & FRCPM">
+                    <div class="card_focus">
+                        <video width="480" height="480" preload="metadata" autoplay loop poster muted>
+                            <source src="projets/escale/cover_video.webm" type="video/webm">
+                        </video>
+                        <div class="card_infos gradient">
+                            <h5 class="cooper-bold">ESCALE à Calais</h5>
+                            <h6 class="quicksand-400">L'évenement maritime de Calais</h6>
+                            <div class="card_category">
+                                <h6 class="category">Événementiel</h6>
+                                <h6 class="category">Montage vidéo</h6>
+                                <h6 class="category">Logo animé</h6>
                             </div>
                         </div>
                     </div>
                 </a>
-            </div>
+                <a href="projets/escale/projet.html" class="card">
+                    <img src="https://picsum.photos/200/300" alt="Image placeholder par Lorem Picsum">
+                    <div class="card_focus">
+                        <video width="480" height="480" preload="metadata" autoplay loop poster muted>
+                            <source src="projets/escale/cover_video.webm" type="video/webm">
+                        </video>
+                        <div class="card_infos gradient">
+                            <h5 class="cooper-bold">ESCALE à Calais</h5>
+                            <h6 class="quicksand-400">L'évenement maritime de Calais</h6>
+                            <div class="card_category">
+                                <h6 class="category">Événementiel</h6>
+                                <h6 class="category">Montage vidéo</h6>
+                                <h6 class="category">Logo animé</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </section>
             <div id="button_more" class="button black"><a href="download/portfolio_alexandre_tachau.pdf" download="portfolio_alexandre_tachau">En voir plus</a></div>
             <div id="contact">
                 <img class="contact_photo_alex mobile_none" src="alexandre_tachau_photo_black.webp" alt="Photo par Alexandre Tachau">
                 <div id="contact_text" class="gap">
                     <div>
-                        <h2 class="caprasimo-regular inline">Un <u>projet</u> en tête ?</h2>
+                        <h2>Un <u>projet</u> en tête ?</h2>
                     </div>
                     <img class="contact_photo_alex mobile_only" src="alexandre_tachau_photo_black.webp" alt="Photo par Alexandre Tachau">
                     <p>Échangeons ensemble à propos de <b>vos idées, vos besoins</b> et créons une <b>vidéo percutante</b> avec du <u>motion design</u> et du <u>storytelling de qualité</u>.</p>
@@ -129,23 +168,24 @@
             <a href="#">Revenir en haut</a>
             <div id="footer_content">
                 <div id="footer_content_name">
-                    <h4 class="caprasimo-regular">Alexandre TACHAU</h4>
+                    <h4 class="cooper-bold">Alexandre TACHAU</h4>
                     <p>Motion Designer - Monteur vidéo - Infographiste</p>
                 </div>
                 <div class="footer_content_links">
-                    <h5 class="caprasimo-regular">Projets</h1>
+                    <h5>Projets</h5>
                     <a href="projets/moonflakes/projet.html">Moonflakes</a>
                     <a href="projets/drowning/projet.html">Drowning</a>
                     <a href="projets/escale/projet.html">Escale à Calais</a>
                 </div>
                 <div class="footer_content_links">
-                    <h5 class="caprasimo-regular">Contact</h1>
+                    <h5>Contact</h5>
                     <a href="download/cv_alexandre_tachau.pdf" download="cv_alexandre_tachau">Voir le CV</a>
                     <a href="mailto:alexandretachau@gmail.com">Envoyer un mail</a>
                 </div>
             </div>
             <p>Crédits à <a href="https://www.instagram.com/yuko.lele?igsh=MWZoZHg3Yjkxd3p0cg==" target="_blank">Yukosmile</a>, <a href="https://moonky.space/" target="_blank">Moonky</a>, <a href="http://patrimoine-maritime.com/" target="_blank">FRCPM</a>, <a href="https://www.instagram.com/cerise_yaya/" target="_blank">Julia Bianconi</a>.
             <br><a href="https://www.flaticon.com/free-icons/stellar" title="stellar icons" target="_blank">Stellar icons created by meaicon - Flaticon</a>
+            <br>Basteleur by Keussel. Distributed by velvetyne.fr.
             <br><br>2025 - Tous droits réservés à un usage personnel.</p>
         </footer>
     </body>
