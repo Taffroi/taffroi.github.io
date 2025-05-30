@@ -18,29 +18,32 @@
             <div id="nav_container">
                 <div id="logo" class="nav_button_group">
                     <a href="#"><img src="icon.webp" alt="Stellar icons created by meaicon - Flaticon"></a>
-                    <a href="#" class="cooper">A. TACHAU</a>
+                    <a href="#" class="cooper">ALEXANDRE<br>TACHAU</a>
                 </div>
-                <div id="nav_button_mid" class="nav_button_group">
-                    <a href="#projets" id="nav_button_projets">Projets</a>
-                    <a href="showreel.html" id="nav_button_showreel">Showreel</a>
-                    <a href="#" id="nav_button_showreel">Qui suis-je ?</a>
+                <div id="nav_button_mid" class="nav_button_group mobile_none">
+                    <a href="#projets" class="btn_nav_middle">Projets</a>
+                    <a href="showreel.html" class="btn_nav_middle">Showreel</a>
+                    <a href="#" class="btn_nav_middle">Qui suis-je ?</a>
                 </div>
-                <div class="nav_button_group">
+                <div class="nav_button_group btn_wrapper">
+                        <div class="btn_star_top_left black"></div>
+                        <div class="btn_star_bottom_right black"></div>
                     <a href="#contact" class="btn_nav_primary">
                         <div class="bnp_text">Contactez-moi</div>
                         <div class="bnp_hover"></div>
                     </a>
                 </div>
             </div>
-            <div id="nav_blur"></div>
+            <div id="nav_blur" class="mobile_none"></div>
         </nav>
         <main>
-            <section id="presentation">
+            <section class="hero_area">
                 <div id="presentation_text">
                     <div id="presentation_text_title">
-                        <h1 class="cooper">Le partenaire <u>créatif</u> pour</h1>
+                        <h1 class="cooper mobile_none">Le partenaire <u>créatif</u> pour</h1>
+                        <h1 class="cooper mobile_only">Le partenaire <u>créatif</u> pour vos</h1>
                         <div class="slider_wrapper">
-                            <h1 class="cooper">vos </h1>
+                            <h1 class="cooper mobile_none">vos </h1>
                             <div class="slider">
                                 <h1 class="cooper-bold slider_text">réseaux sociaux</h1>
                                 <h1 class="cooper-bold slider_text">sites web</h1>
@@ -51,15 +54,23 @@
                     </div>
                     <p>Spécialisé en <b>montage vidéo et production audiovisuelle</b>, j'ai travaillé sur des projets variés : <u>publicités en animation</u>, vidéos pour réseaux sociaux, <u>bande-annonces</u>, et plus.</p>
                     <div class="hero_cta">
-                        <a href="#projets" class="btn_primary">
-                            <div class="bp_text">Voir les réalisations</div>
-                            <div class="bp_bg"></div>
-                            <div class="bp_hover"></div>
-                        </a>
-                        <a href="#projets" class="btn_secondary">
+                        <div class="btn_wrapper">
+                            <!-- <div class="star">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 2000 2000"><g><g fill="#56b88a" transform="matrix(-0.7071067811865475,0.7071067811865476,-0.7071067811865476,-0.7071067811865475,2414.213562373095,999.9999999999999)"><path d="M 500 500 C 1000 1000 1000 1000 1500 500 C 1000 1000 1000 1000 1500 1500 C 1000 1000 1000 1000 500 1500 C 1000 1000 1000 1000 500 500" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg>
+                            </div> -->
+                            <div class="btn_star_top_left"></div>
+                            <div class="btn_star_bottom_right"></div>
+                            <a href="#projets" class="btn_primary">
+                                <div class="bp_text">Voir les réalisations</div>
+                                <div class="bp_bg"></div>
+                                <div class="bp_hover"></div>
+                            </a>
+                        </div>
+                        <a href="#projets" class="btn_secondary mobile_none">
                             <!-- <div class="bs_anim_question">?</div> -->
                             <div class="bs_text">Qui suis-je ?</div>
                             <div class="bs_hover"></div>
+                            <div class="bs_question cooper-bold">?</div>
                         </a>
                     </div>
                 </div>
@@ -69,6 +80,11 @@
                 </div>
             </section>
             <section class="client_area">
+                <div class="wave">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
+                </div>
                 <h4 class="separator relative">J'ai travaillé avec eux...</h4>
                 <div>
                 </div>
@@ -113,6 +129,23 @@
                 </a>
                 <a href="projets/escale/projet.html" class="card">
                     <img src="projets/escale/cover.webp" alt="Image du projet Escale par Alexandre Tachau & FRCPM">
+                    <div class="card_focus">
+                        <video width="480" height="480" preload="metadata" autoplay loop poster muted>
+                            <source src="projets/escale/cover_video.webm" type="video/webm">
+                        </video>
+                        <div class="card_infos gradient">
+                            <h5 class="cooper-bold">ESCALE à Calais</h5>
+                            <h6 class="quicksand-400">L'évenement maritime de Calais</h6>
+                            <div class="card_category">
+                                <h6 class="category">Événementiel</h6>
+                                <h6 class="category">Montage vidéo</h6>
+                                <h6 class="category">Logo animé</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="projets/escale/projet.html" class="card">
+                    <img src="https://picsum.photos/200/300" alt="Image placeholder par Lorem Picsum">
                     <div class="card_focus">
                         <video width="480" height="480" preload="metadata" autoplay loop poster muted>
                             <source src="projets/escale/cover_video.webm" type="video/webm">
