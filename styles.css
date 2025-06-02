@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn_secondary:hover .bs_question {
-    opacity: 0.1;
+    opacity: 0.15;
     animation: bs_question_rotate 0.4s ease-in-out infinite alternate;
 }
 
@@ -505,16 +505,11 @@ nav {
     width: max-content;
 }
 
-.btn_nav_middle:hover {
-    /* background-color: #FFFFFF; */
-    /* transform: scale(1.05); */
-}
-
 .btn_nav_middle::before {
     content: "";
     position: absolute;
     width: calc(100% - 4.2em);
-    height: 1.5px;
+    height: 2px;
     transform-origin: 100% 50%;
     transform: translateY(-0.4em) scaleX(0);
     background-color: #bcb3a1;
@@ -609,9 +604,37 @@ main > .button {
     padding-top: 0;
 }
 
+.text_fill {
+    background: linear-gradient(90deg, #bcb3a1 0 50%, #211a19 50% 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    color: transparent;
+    background-position-x: 0%;
+    animation: 1s ease 0s 1 both text_fill_anim;
+}
+
+.text_fill_white {
+    background: linear-gradient(90deg, #bcb3a1 0 50%, #FFFFFF 50% 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    color: transparent;
+    background-position-x: 0%;
+    animation: 1s ease 0s 1 both text_fill_anim;
+}
+
+@keyframes text_fill_anim {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: -100%;
+    }
+}
+
 #presentation_text_title * {
     line-height: 1.2em;
     text-align: left;
+    
 }
 
 /* TEXTE SLIDER */
@@ -1106,6 +1129,50 @@ PAGES DE PROJET
 
 #project_bottom > h2 {
     color:#faf4e8
+}
+
+/* 
+
+ABOUT PAGE
+
+*/
+
+.about_main_area {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.about_img {
+    height: 80vh;
+    filter:drop-shadow(7px 3px 0px #bcb3a1);
+    animation: 1s cubic-bezier(.34,0,.21,1.35) 0s both start_slide;
+    position: absolute;
+    left: -5%;
+}
+
+.about_main_photo {
+    height: 15vh;
+    filter:drop-shadow(7px 3px 0px #bcb3a1);
+    animation: 1s cubic-bezier(.34,0,.21,1.35) 0s both start_slide;
+    position: absolute;
+    top: 3%;
+    left: -3%;
+}
+
+@keyframes start_slide {
+    0% {
+        opacity: 0.5;
+        transform: translate(0%, 5vh) rotate(-5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0);
+    }
 }
 
 /* 
