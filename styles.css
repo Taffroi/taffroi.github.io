@@ -22,6 +22,18 @@
     line-height: 1.1em;
 }
 
+@font-face {
+    font-family: "Basteleur";
+    src:
+        url(./fonts/Basteleur-Moonlight.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Basteleur-bold";
+    src:
+        url(./fonts/Basteleur-Bold.woff2) format("woff2");
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden; /* Cache-misère, la page dépasse un peu de 100vw */
@@ -433,15 +445,15 @@ h1 {
 }
 
 h2 {
-    font-size: 44px;
+    font-size: 3rem;
 }
 
 h3 {
-    font-size: 38px;
+    font-size: 2.4rem;
 }
 
 h4 {
-    font-size: 32px;
+    font-size: 1.8rem;
 }
 
 h5 {
@@ -456,6 +468,36 @@ b {
     font-weight: 600;
 }
 
+.title {
+    margin-left: 4em;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    width: 3.2em;
+    height: 3.2em;
+    background-color: #56b88a;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -4em;
+    mask: radial-gradient(1.6em 1.6em at 1.6em 1.6em,#0000 10% 99%,#000) -1.6em -1.6em;
+    transition: all 0.15s ease 0.05s;
+    animation: 20s linear 0s infinite rotation_360;
+}
+
+/* .title::after {
+    content: "01";
+    font-family: "Basteleur";
+    position: absolute;
+    font-size: 2.4em;
+    color:#3a2d27;
+    left: -1em;
+    transition: all 0.15s ease 0.05s;
+    z-index: 1;
+} */
+
 nav {
     display: flex;
     flex-direction: row;
@@ -468,7 +510,7 @@ nav {
     top: 0px;
     z-index: 2;
     box-shadow: 0px 0px 5px 2px #faf4e8 inset;
-    transition: top 0.2s ease 0.05s;
+    transition: top 0.25s ease 0.05s;
 }
 
 #nav_blur {
@@ -606,7 +648,7 @@ main > .button {
 }
 
 .text_fill {
-    background: linear-gradient(90deg, #bcb3a1 0 50%, #211a19 50% 100%);
+    background: linear-gradient(90deg, #bcb3a1 0 50%, transparent 50% 100%);
     background-size: 200% 100%;
     background-clip: text;
     color: transparent;
@@ -614,13 +656,8 @@ main > .button {
     animation: 1s ease 0s 1 both text_fill_anim;
 }
 
-.text_fill_white {
-    background: linear-gradient(90deg, #bcb3a1 0 50%, #FFFFFF 50% 100%);
-    background-size: 200% 100%;
-    background-clip: text;
-    color: transparent;
-    background-position-x: 0%;
-    animation: 1s ease 0s 1 both text_fill_anim;
+.text_fill.white {
+    background-color: #FFFFFF;
 }
 
 @keyframes text_fill_anim {
@@ -707,7 +744,7 @@ main > .button {
     border-radius: 50%;
     border: 7px dashed #bcb3a1;
     z-index: -1;
-    animation: 60s linear 0s infinite circle_rotation;
+    animation: 60s linear 0s infinite rotation_360;
     top: 15%;
     left: 4%;
     right: 0;
@@ -727,21 +764,28 @@ u {
 .client_area {
     background-color: #211a19;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .client_area > h4 {
     color: white;
 }
 
+.client_content {
+    justify-content: end;
+    align-items: flex-end;
+}
+
 .client_card {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #211a19;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    width: 70%;
     border-radius: 16px;
     padding: 32px 48px;
-    gap: 64px;
+    gap: 16px;
 }
 
 .grid {
@@ -1238,7 +1282,7 @@ footer * {
 }
 
 
-@keyframes circle_rotation {
+@keyframes rotation_360 {
     0% {
         transform: rotate(0deg);
     }
@@ -1359,7 +1403,7 @@ CSS : MOBILE + TABLETTES
         width: 100%;
         aspect-ratio: 1/1;
         border: 5px dashed #bcb3a1;
-        animation: 60s linear 0s infinite circle_rotation;
+        animation: 60s linear 0s infinite rotation_360;
         top: 15%;
         left: 0;
         right: 0;
