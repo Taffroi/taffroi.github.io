@@ -16,9 +16,9 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("scroll_show");
     } else {
-      entry.target.classList.remove(
-        "scroll_show"
-      ); /* Remet l'animation si le visiteur revient en haut puis en bas */
+      //   entry.target.classList.remove(
+      //     "scroll_show"
+      //   ); /* Remet l'animation si le visiteur revient en haut puis en bas */
     }
   });
 });
