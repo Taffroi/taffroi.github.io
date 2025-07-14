@@ -25,7 +25,7 @@
       content="Alexandre Tachau, Portfolio, Motion Design, graphisme, montage vidéo, monteur vidéo, freelance"
     />
     <meta charset="UTF-8" />
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
   </head>
   <body>
     <nav id="nav">
@@ -122,8 +122,13 @@
             ></path>
           </svg>
         </div>
+<<<<<<< Updated upstream
         <section class="client_content">
           <h2 class="relative cooper-bold title text_fill white">
+=======
+        <section class="client_content scroll_hidden">
+          <h2 class="relative cooper-bold title_wip text_fill white">
+>>>>>>> Stashed changes
             Ce site est en <br />construction.
           </h2>
           <p class="quicksand-400">
@@ -171,9 +176,11 @@
       </section>
       <section class="works_area">
         <div>
-          <h2 class="relative" id="projets">Mes dernières réalisations</h2>
+          <h2 class="relative scroll_hidden" id="projets">
+            Mes dernières réalisations
+          </h2>
         </div>
-        <section class="grid">
+        <section class="grid scroll_hidden">
           <a href="projets/moonflakes/projet.html" class="card">
             <img
               src="projets/moonflakes/cover.webp"
@@ -330,14 +337,14 @@
             </div>
           </a> -->
         </section>
-        <p>
+        <p class="scroll_hidden">
           Mon site étant en construction, je n'ai pas pu ajouter la totalité de
           mes travaux. <br /><b
             >Cependant, mes autres projets se trouvent sur mon portfolio PDF</b
           >
           !
         </p>
-        <div id="button_more" class="button black">
+        <div id="button_more" class="button black scroll_hidden">
           <a
             href="download/portfolio_alexandre_tachau.pdf"
             download="portfolio_alexandre_tachau"
@@ -345,7 +352,7 @@
           >
         </div>
       </section>
-      <div id="contact">
+      <div id="contact" class="scroll_hidden">
         <img
           class="contact_photo_alex mobile_none"
           src="alexandre_tachau_photo_black.webp"
