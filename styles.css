@@ -65,6 +65,16 @@ h6 {
   line-height: 1.1em;
 }
 
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color: hsl(from var(--text-color) h s calc(l + 60));
+  height: 2px;
+  margin: 20px 0;
+}
+
 .material-symbols-rounded {
   user-select: none;
   margin-right: 10px;
@@ -470,7 +480,7 @@ body {
   background-color: var(--base-color);
 }
 
-p {
+p, li {
   font-size: 20px;
 }
 
@@ -876,14 +886,14 @@ u {
 }
 
 .works_area_project {
-  width: 80%;
+  padding: 2% 2%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   gap: 12px;
-  background: hsl(from var(--base-color) h s l);
-  background-image: url(./noise.jpg);
+  background: url(./noise.jpg);
   border: hsl(from var(--text-color) h s calc(l + 10)) 2px solid;
   border-radius: 32px;
 }
@@ -896,7 +906,7 @@ u {
   align-items: flex-start;
   position: relative;
   gap: 12px;
-  padding: 4% 2rem;
+  padding: 4% 2%;
 }
 
 /* .project_info h1,
@@ -909,7 +919,7 @@ p {
   color: #ffffff;
 } */
 
-.project_info > h3 {
+.project_info > h3, .project_info > p {
   position: relative;
   text-align: left;
 }
@@ -926,7 +936,7 @@ p {
   background-color: var(--accent-color);
   top: 0.1em;
   left: -1.3em;
-  mask: radial-gradient(0.5em 0.5em at 0.5em 0.5em, #0000 0% 99%, #000) -0.5em -0.5em;
+  mask: radial-gradient(0.5em 0.5em at 0.5em 0.5em, #0000 0% 94%, #000) -0.5em -0.5em;
   transition: all 0.15s ease 0.05s;
   /* animation: 20s linear 0s infinite rotation_360; */
 }
@@ -949,6 +959,30 @@ p {
   border-radius: 28px;
   padding: 0.3em 1em;
   text-shadow: none;
+}
+
+.project_info > ul > li + li {
+  margin-top: 10px;
+}
+
+.project_list {
+  list-style: none;
+  padding: 0;
+}
+
+.project_list_icon {
+  margin-right: 0.5em;
+}
+
+.project_list_icon, .project_list_text {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 0.4em;
+  font-weight: 600;
+}
+
+.project_video {
+  border-radius: inherit;
 }
 
 .grid {
