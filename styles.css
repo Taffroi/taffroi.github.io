@@ -883,6 +883,7 @@ u {
   align-items: flex-start;
   gap: 12px;
   background: hsl(from var(--base-color) h s l);
+  background-image: url(./noise.jpg);
   border: hsl(from var(--text-color) h s calc(l + 10)) 2px solid;
   border-radius: 32px;
 }
