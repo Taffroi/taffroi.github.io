@@ -719,6 +719,7 @@ main > .button {
   background-clip: text;
   color: transparent;
   background-position-x: 0%;
+  line-height: 1.2em;
   animation: 1s ease 0s 1 both text_fill_anim;
 }
 
@@ -882,6 +883,42 @@ u {
   gap: 16px;
 }
 
+.section_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(from var(--base-color) h s calc(l - 6));
+  width: 80%;
+  padding: 3% 0;
+  border-radius: 48px;
+}
+
+.section_title_icon {
+  width: 6rem;
+  height: 6rem;
+  animation: 2s star_wiggle ease-in-out infinite alternate-reverse;
+  transform-origin: 50% 50%;
+}
+
+.section_title_icon:hover {
+  transition: 2s transform cubic-bezier(0.105, 0.010, 0.020, 1.005);
+}
+
+@keyframes star_wiggle {
+  0% {
+    transform: scale(1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(5deg);
+  }
+}
+
+.section_title_description {
+  margin-top: 0.5em;
+  color: hsl(from var(--text-color) h s calc(l + 20));
+}
+
 .works_area {
   flex-direction: column;
   gap: 64px;
@@ -894,8 +931,9 @@ u {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 32px;
-  background: 5% url(./noise.jpg);
+  gap: 8%;
+  background: url(./noise.jpg);
+  background-size: cover;
   border: hsl(from var(--text-color) h s calc(l + 10)) 2px solid;
   border-radius: 32px;
   transform: scale(1);
@@ -909,7 +947,7 @@ u {
   position: relative;
   border-radius: inherit;
   gap: 12px;
-  padding: 4% 0;
+  padding: 3% 0;
 }
 
 /* .project_info h1,
@@ -1158,6 +1196,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 32px;
 }
 
 #contact_text h2,
