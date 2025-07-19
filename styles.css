@@ -898,6 +898,7 @@ u {
   background: 5% url(./noise.jpg);
   border: hsl(from var(--text-color) h s calc(l + 10)) 2px solid;
   border-radius: 32px;
+  transform: scale(1);
 }
 
 .project_info {
