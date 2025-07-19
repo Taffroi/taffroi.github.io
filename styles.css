@@ -65,11 +65,16 @@ h6 {
   line-height: 1.1em;
 }
 
+a {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
 hr {
   border: 0;
-  clear:both;
-  display:block;
-  width: 96%;               
+  clear: both;
+  display: block;
+  width: 100%;
   background-color: hsl(from var(--text-color) h s calc(l + 60));
   height: 2px;
   margin: 20px 0;
@@ -480,7 +485,8 @@ body {
   background-color: var(--base-color);
 }
 
-p, li {
+p,
+li {
   font-size: 20px;
 }
 
@@ -881,32 +887,28 @@ u {
   gap: 64px;
 }
 
-.works_area p {
-  text-align: center;
-}
-
 .works_area_project {
-  padding: 2% 2%;
-  width: 70%;
+  padding: 2% 5%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-  background: url(./noise.jpg);
+  align-items: center;
+  gap: 32px;
+  background: 5% url(./noise.jpg);
   border: hsl(from var(--text-color) h s calc(l + 10)) 2px solid;
   border-radius: 32px;
 }
 
 .project_info {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
+  border-radius: inherit;
   gap: 12px;
-  padding: 4% 2%;
+  padding: 4% 0;
 }
 
 /* .project_info h1,
@@ -919,7 +921,8 @@ p {
   color: #ffffff;
 } */
 
-.project_info > h3, .project_info > p {
+.project_info > h3,
+.project_idescription {
   position: relative;
   text-align: left;
 }
@@ -941,6 +944,38 @@ p {
   /* animation: 20s linear 0s infinite rotation_360; */
 }
 
+.project_date {
+  color: hsl(from var(--text-color) h s calc(l + 20));
+}
+
+.project_client {
+  text-decoration-line: none;
+  color: inherit;
+  animation: 4s cubic-bezier(0.34, 0, 0.21, 1.35) 2s infinite link_shake;
+  transform: scale(8);
+}
+
+.project_client:visited {
+  color: inherit;
+}
+
+.project_client:hover {
+  text-decoration-line: underline;
+  transform: scale(8);
+}
+
+@keyframes link_shake {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.2) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
 .project_category {
   display: flex;
   flex-direction: row;
@@ -948,6 +983,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   gap: 0.8em;
+  margin-bottom: 0.8em;
 }
 
 .category {
@@ -955,34 +991,52 @@ p {
   color: var(--text-color);
   font-weight: 600;
   font-size: 17px;
-  background-color: #ffffff;
+  background-color: hsl(from var(--base-color) h calc(s + 10) calc(l - 18));
   border-radius: 28px;
   padding: 0.3em 1em;
   text-shadow: none;
+}
+
+.project_description {
+  text-align: left;
+}
+
+.project_list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2em;
 }
 
 .project_info > ul > li + li {
   margin-top: 10px;
 }
 
-.project_list {
-  list-style: none;
-  padding: 0;
-}
-
 .project_list_icon {
-  margin-right: 0.5em;
+  margin-right: 0.6em;
 }
 
-.project_list_icon, .project_list_text {
+.project_list_icon,
+.project_list_text {
   vertical-align: middle;
   display: inline-block;
   line-height: 0.4em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .project_video {
   border-radius: inherit;
+  max-width: 28vw;
+  max-height: 70vh;
+}
+
+.project_video > video,
+.project_video > iframe {
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
+  border-radius: inherit;
+  object-fit: contain;
 }
 
 .grid {
@@ -1486,7 +1540,8 @@ CSS : MOBILE + TABLETTES
     scroll-padding-top: 56px;
   }
 
-  p {
+  p,
+  li {
     font-size: 1rem;
   }
 
@@ -1495,19 +1550,19 @@ CSS : MOBILE + TABLETTES
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 1.5rem;
   }
 
   h4 {
-    font-size: 16px;
+    font-size: 1.3rem;
   }
 
   h5 {
-    font-size: 14px;
+    font-size: 1.2rem;
   }
 
   h6 {
@@ -1668,6 +1723,48 @@ CSS : MOBILE + TABLETTES
 
   .works_area {
     gap: 48px;
+  }
+
+  .works_area_project {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    border-radius: 24px;
+  }
+
+  .project_info {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project_category {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project_description {
+    text-align: center;
+  }
+
+  .project_list {
+    margin-bottom: 0.6em;
+  }
+
+  .project_list_icon,
+  .project_list_text {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1em;
+    font-weight: 500;
+  }
+
+  .project_video {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 0.4em;
   }
 
   .grid {

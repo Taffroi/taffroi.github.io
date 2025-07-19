@@ -178,20 +178,43 @@
         </div>
         <section class="works_area_project scroll_hidden">
           <div class="project_info">
-            <h6 class="project_date">MOONKY - 2025</h6>
+            <h6 class="project_date">
+              <a
+                class="project_client"
+                href="https://moonky.space"
+                target="_blank"
+                >MOONKY</a
+              >
+              - 2025
+            </h6>
             <h3 class="project_title">Publicité Moonflakes</h3>
             <div class="project_category">
               <h6 class="category">Motion Design</h6>
               <h6 class="category">Animation 3D</h6>
               <h6 class="category">Graphisme</h6>
             </div>
-            <hr />
-            <p>
-              Le but était de réaliser une publicité fictive en animation qui
-              correspond au projet de mon client : engageante par ses effets
-              visuels, et rappelant au jeune public l'espace, tout en respectant
-              la direction artistique du produit et en innovant sur celle-ci.
+            <div class="project_video mobile_only">
+              <video
+                width="480"
+                height="480"
+                preload="metadata"
+                autoplay
+                loop
+                poster
+                muted
+                class="project_video"
+              >
+                <source
+                  src="projets/moonflakes/cover_video.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <p class="project_description">
+              Il s'agit d'une publicité en animation réalisée pour une marque
+              fictive de céréales : Moonflakes.
             </p>
+            <hr />
             <ul class="project_list">
               <li>
                 <span class="project_list_icon">
@@ -222,7 +245,7 @@
                     </g>
                   </svg> </span
                 ><span class="project_list_text"
-                  >Engageante par ses visuels et son sound design</span
+                  >Animation enjouée qui crée de l'engagement</span
                 >
               </li>
               <li>
@@ -254,7 +277,7 @@
                     </g>
                   </svg> </span
                 ><span class="project_list_text"
-                  >Engageante par ses visuels et son sound design</span
+                  >Visuels adaptés à un jeune public</span
                 >
               </li>
               <li>
@@ -286,7 +309,7 @@
                     </g>
                   </svg> </span
                 ><span class="project_list_text"
-                  >Engageante par ses visuels et son sound design</span
+                  >Sound design aux petits oignons</span
                 >
               </li>
             </ul>
@@ -297,27 +320,29 @@
               <div class="btn_star_top_left"></div>
               <div class="btn_star_bottom_right"></div>
               <a href="#projets" class="btn_primary">
-                <div class="bp_text">Template bouton</div>
                 <div class="bp_bg"></div>
                 <div class="bp_hover"></div>
+                <div class="bp_text">Voir les coulisses</div>
               </a>
             </div>
           </div>
-          <video
-            width="480"
-            height="480"
-            preload="metadata"
-            autoplay
-            loop
-            poster
-            muted
-            class="project_video"
-          >
-            <source
-              src="projets/moonflakes/cover_video.webm"
-              type="video/webm"
-            />
-          </video>
+          <div class="project_video mobile_none">
+            <video
+              width="480"
+              height="480"
+              preload="metadata"
+              autoplay
+              loop
+              poster
+              muted
+              class="project_video"
+            >
+              <source
+                src="projets/moonflakes/cover_video.webm"
+                type="video/webm"
+              />
+            </video>
+          </div>
         </section>
         <section class="grid scroll_hidden">
           <a href="projets/moonflakes/projet.html" class="card">
