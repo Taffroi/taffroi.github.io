@@ -903,8 +903,58 @@ u {
   text-decoration-color: var(--accent-color);
 }
 
-.client_area {
+.about_area {
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
   background-color: var(--text-color);
+}
+
+.section_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_title.works {
+  background-color: hsl(from var(--base-color) h s calc(l - 6));
+  width: 80%;
+  padding: 3% 0;
+  border-radius: 48px;
+}
+
+.section_title_icon {
+  width: 6rem;
+  height: 6rem;
+  animation: 2s star_wiggle ease-in-out infinite alternate-reverse;
+  transform-origin: 50% 50%;
+}
+
+.section_title_icon:hover {
+  transition: 2s transform cubic-bezier(0.105, 0.01, 0.02, 1.005);
+}
+
+@keyframes star_wiggle {
+  0% {
+    transform: scale(1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(5deg);
+  }
+}
+
+.section_title_description {
+  margin-top: 0.5em;
+  color: hsl(from var(--text-color) h s calc(l + 10));
+  text-align: center;
+}
+
+.section_title_description.works {
+  color: var(--base-color);
+}
+
+.client_area {
   flex-direction: column;
   align-items: center;
 }
@@ -939,42 +989,6 @@ u {
   border-radius: 16px;
   padding: 32px 48px;
   gap: 16px;
-}
-
-.section_title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(from var(--base-color) h s calc(l - 6));
-  width: 80%;
-  padding: 3% 0;
-  border-radius: 48px;
-}
-
-.section_title_icon {
-  width: 6rem;
-  height: 6rem;
-  animation: 2s star_wiggle ease-in-out infinite alternate-reverse;
-  transform-origin: 50% 50%;
-}
-
-.section_title_icon:hover {
-  transition: 2s transform cubic-bezier(0.105, 0.01, 0.02, 1.005);
-}
-
-@keyframes star_wiggle {
-  0% {
-    transform: scale(1) rotate(-5deg);
-  }
-  100% {
-    transform: scale(1) rotate(5deg);
-  }
-}
-
-.section_title_description {
-  margin-top: 0.5em;
-  color: hsl(from var(--text-color) h s calc(l + 10));
 }
 
 .works_area {
@@ -1101,7 +1115,7 @@ p {
 .project_list {
   list-style: none;
   padding: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1.4em;
 }
 
 .project_list li {
@@ -1747,10 +1761,6 @@ CSS : MOBILE + TABLETTES
     font-size: 12px;
   }
 
-  .mobile_none {
-    display: none;
-  }
-
   .mobile_only {
     display: initial;
   }
@@ -1825,7 +1835,7 @@ CSS : MOBILE + TABLETTES
   }
 
   main > section {
-    padding: 4rem min(5%, 6rem);
+    padding: 4rem min(3%, 3rem);
   }
 
   .hero_area {
@@ -1887,6 +1897,13 @@ CSS : MOBILE + TABLETTES
     font-size: 1.1rem;
   }
 
+  .section_title.works {
+    background-color: hsl(from var(--base-color) h s calc(l - 6));
+    width: 100%;
+    padding: 5% 8%;
+    border-radius: 32px;
+  }
+
   .client_content {
     flex-direction: column;
     margin: 0;
@@ -1909,7 +1926,8 @@ CSS : MOBILE + TABLETTES
     justify-content: flex-end;
     align-items: center;
     gap: 32px;
-    border-radius: 24px;
+    border-radius: 32px;
+    padding: 2% 3%;
   }
 
   .project_info {
@@ -1939,11 +1957,61 @@ CSS : MOBILE + TABLETTES
     font-weight: 500;
   }
 
+  .project_video,
+  .project_vertical_double {
+    margin-bottom: 0.4em;
+  }
+
   .project_video {
     max-width: 100%;
     max-height: 100%;
-    margin-bottom: 0.4em;
     aspect-ratio: 1/1;
+  }
+
+  .project_vertical_double {
+    max-width: 36vw;
+    max-height: 56vh;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+  }
+
+  .project_vertical_double video {
+    transition: all 0.4s ease;
+  }
+
+  .project_vertical_double video:first-of-type {
+    filter: initial;
+  }
+
+  .project_vertical_double video:last-of-type {
+    box-shadow: initial;
+  }
+
+  .project_vertical_double video:hover {
+    z-index: initial;
+    filter: initial;
+    transform: initial;
+    box-shadow: initial;
+  }
+
+  .project_vertical_double video + video {
+    position: initial;
+    right: initial;
+    top: initial;
+    order: -1;
+  }
+
+  .project_video > video,
+  .project_video > iframe,
+  .project_vertical_double > video,
+  .project_vertical_double > iframe {
+    max-width: inherit;
+    max-height: inherit;
+    border-radius: inherit;
+    object-fit: cover;
+    border: hsl(from var(--text-color) h s calc(l + 20)) 2px solid;
   }
 
   .grid {
@@ -2110,7 +2178,6 @@ CSS : MOBILE + TABLETTES
   }
 
   .button {
-    transform: scale(0.9);
     transform-origin: center center;
   }
 
@@ -2145,5 +2212,9 @@ CSS : MOBILE + TABLETTES
 
   .footer_content_links {
     align-items: center;
+  }
+
+  .mobile_none {
+    display: none;
   }
 }
