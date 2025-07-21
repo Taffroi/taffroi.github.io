@@ -844,6 +844,7 @@ main > .button {
 
 .slider > h1:first-child {
   animation: slider_wrapper 8s cubic-bezier(0.34, 0, 0.21, 1.35) 1.5s infinite;
+  animation-delay: 2s;
 }
 
 @keyframes slider_wrapper {
@@ -1920,7 +1921,7 @@ CSS : MOBILE + TABLETTES
   .section_title.works {
     background-color: hsl(from var(--base-color) h s calc(l - 6));
     width: 100%;
-    padding: 5% 8%;
+    padding: 8% 8%;
     border-radius: 32px;
   }
 
