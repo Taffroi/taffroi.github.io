@@ -768,7 +768,7 @@ main > .button {
 .hero_area {
   align-items: center;
   gap: 80px;
-  padding-top: 0;
+  padding-top: 3vh;
 }
 
 .text_fill {
@@ -975,8 +975,9 @@ u {
 }
 
 .client_showcase {
-  justify-content: end;
-  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .client_card {
@@ -1845,6 +1846,7 @@ CSS : MOBILE + TABLETTES
     justify-content: space-between;
     align-items: center;
     gap: 0px;
+    padding-top: 0;
   }
 
   #presentation_img {
