@@ -69,7 +69,7 @@ h6 {
   opacity: 0;
   transition: all 0.7s;
   filter: blur(2.4px);
-  transform: translateY(40px);
+  translate: 0 40px;
 }
 
 @media (prefers-reduced-motion) {
@@ -81,7 +81,7 @@ h6 {
 .scroll_show {
   opacity: 1;
   filter: blur(0px);
-  transform: translateY(0px);
+  translate: 0 0;
 }
 
 a {
@@ -1027,7 +1027,6 @@ u {
   background-size: cover;
   border: hsl(from var(--text-color) h s calc(l + 10)) 2px solid;
   border-radius: 32px;
-  transform: scale(1);
   padding: 0 3%;
 }
 
