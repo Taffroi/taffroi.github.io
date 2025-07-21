@@ -9,7 +9,7 @@
 }
 
 :root {
-  --base-color: #faf4e8;
+  --base-color: #fcf6e4;
   --accent-color: #37c884;
   --text-color: #211a19;
 }
@@ -76,7 +76,7 @@ hr {
   display: block;
   width: 100%;
   background-color: hsl(from var(--text-color) h s calc(l + 60));
-  height: 2px;
+  height: 1.5px;
   margin: 20px 0;
 }
 
@@ -155,6 +155,7 @@ hr {
 
 .btn_wrapper {
   position: relative;
+  cursor: pointer;
 }
 
 .btn_wrapper:hover > .btn_star_bottom_right,
@@ -220,7 +221,7 @@ hr {
 
 .bp_text {
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: #000;
   text-align: center;
   font-weight: 600;
   transition: color 0.1s ease-out;
@@ -280,15 +281,72 @@ hr {
   overflow: hidden;
 }
 
+.btn_secondary.green_fill {
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 0px 1.5px var(--accent-color) inset;
+  overflow: hidden;
+}
+
+.effect_shine {
+  position: absolute;
+  width: 26%;
+  height: 200%;
+  top: -50%;
+  left: -30%;
+  background-color: #fff;
+  filter: blur(3px);
+  transform: rotate(20deg);
+  animation: effect_shine_sweep 6s infinite
+    cubic-bezier(0.42, 0.005, 0.165, 0.995);
+  z-index: 0;
+}
+
+@keyframes effect_shine_sweep {
+  0% {
+    left: -30%;
+    opacity: 0.15;
+  }
+  20% {
+    left: 120%;
+    opacity: 0.1;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
 .bs_text {
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: #000;
   text-align: center;
   font-weight: 600;
   transition: color 0.1s ease-in-out;
+  z-index: 2;
+}
+
+.bs_text.bs_text.external_link {
+  margin-right: 0.9em;
+}
+
+.bs_text.external_link::after {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 -5 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round' %3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M7 17L17 7M17 7H8M17 7V16' stroke='%23000000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' %3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  position: absolute;
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  transform: translateX(0.2em);
+  transition: all 0.15s ease 0.05s;
+}
+
+.btn_secondary:hover .bs_text.external_link::after {
+  filter: invert();
 }
 
 .btn_secondary:hover .bs_text {
+  color: #ffffff;
+}
+
+.btn_secondary:hover .bs_text.green_fill {
   color: #ffffff;
 }
 
@@ -306,6 +364,11 @@ hr {
   border-radius: 50%;
 }
 
+.bs_hover.green_fill {
+  background-color: #000000;
+  z-index: 1;
+}
+
 .bs_question {
   color: #bcb3a1;
   position: absolute;
@@ -316,6 +379,11 @@ hr {
   z-index: -1;
   opacity: 0;
   transform-origin: center 80%;
+}
+
+.bs_question.green_fill {
+  color: #bcb3a1;
+  z-index: 1;
 }
 
 .btn_secondary:hover .bs_hover {
@@ -390,26 +458,6 @@ hr {
   transform: translateY(-2.2em) scale(1.4);
 }
 
-.relative {
-  position: relative;
-}
-
-.text_center {
-  text-align: center;
-}
-
-.mobile_none {
-  display: initial;
-}
-
-.mobile_only {
-  display: none;
-}
-
-.inline {
-  display: inline;
-}
-
 .modal {
   display: flex;
   flex-direction: column;
@@ -482,7 +530,17 @@ hr {
 }
 
 body {
-  background-color: var(--base-color);
+  /* background-color: var(--base-color); */
+  background: 70% / contain url(./background.jpg); /* Photo de Annie Spratt sur Unsplash */
+  position: relative;
+}
+
+body > img {
+  z-index: -99;
+  position: absolute;
+  mix-blend-mode: normal;
+  opacity: 1;
+  width: 100%;
 }
 
 p,
@@ -499,7 +557,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
 }
 
 h4 {
@@ -719,7 +777,7 @@ main > .button {
   background-clip: text;
   color: transparent;
   background-position-x: 0%;
-  line-height: 1.2em;
+  line-height: 1.22em;
   animation: 1s ease 0s 1 both text_fill_anim;
 }
 
@@ -902,7 +960,7 @@ u {
 }
 
 .section_title_icon:hover {
-  transition: 2s transform cubic-bezier(0.105, 0.010, 0.020, 1.005);
+  transition: 2s transform cubic-bezier(0.105, 0.01, 0.02, 1.005);
 }
 
 @keyframes star_wiggle {
@@ -916,7 +974,7 @@ u {
 
 .section_title_description {
   margin-top: 0.5em;
-  color: hsl(from var(--text-color) h s calc(l + 20));
+  color: hsl(from var(--text-color) h s calc(l + 10));
 }
 
 .works_area {
@@ -925,18 +983,18 @@ u {
 }
 
 .works_area_project {
-  padding: 2% 5%;
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 8%;
-  background: url(./noise.jpg);
+  gap: 4%;
+  background-color: #fff;
   background-size: cover;
   border: hsl(from var(--text-color) h s calc(l + 10)) 2px solid;
   border-radius: 32px;
   transform: scale(1);
+  padding: 0 3%;
 }
 
 .project_info {
@@ -947,7 +1005,7 @@ u {
   position: relative;
   border-radius: inherit;
   gap: 12px;
-  padding: 3% 0;
+  padding: 4% 0 4% 2%;
 }
 
 /* .project_info h1,
@@ -1046,36 +1104,94 @@ p {
   margin-bottom: 2em;
 }
 
+.project_list li {
+  position: relative;
+}
+
 .project_info > ul > li + li {
-  margin-top: 10px;
+  margin-top: 0.8em;
 }
 
 .project_list_icon {
-  margin-right: 0.6em;
+  width: 1em;
+  height: 1em;
+  z-index: 10;
+}
+
+.project_list_text {
+  margin-left: 2.2em;
+}
+
+.project_list_text::before {
+  content: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g id="style=stroke"><g id="check-circle"><path id="vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75ZM1.25 12C1.25 6.06294 6.06294 1.25 12 1.25C17.9371 1.25 22.75 6.06294 22.75 12C22.75 17.9371 17.9371 22.75 12 22.75C6.06294 22.75 1.25 17.9371 1.25 12Z" fill="%23211a19"></path><path id="vector (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 8.96967C16.8232 9.26256 16.8232 9.73744 16.5303 10.0303L11.9041 14.6566C11.2207 15.34 10.1126 15.34 9.42923 14.6566L7.46967 12.697C7.17678 12.4041 7.17678 11.9292 7.46967 11.6363C7.76256 11.3434 8.23744 11.3434 8.53033 11.6363L10.4899 13.5959C10.5875 13.6935 10.7458 13.6935 10.8434 13.5959L15.4697 8.96967C15.7626 8.67678 16.2374 8.67678 16.5303 8.96967Z" fill="%23211a19"></path></g></g></g></svg>');
+  position: absolute;
+  width: 1.6em;
+  height: 1.6em;
+  top: 0em;
+  left: 0;
+  transition: all 0.15s ease 0.05s;
 }
 
 .project_list_icon,
 .project_list_text {
   vertical-align: middle;
   display: inline-block;
-  line-height: 0.4em;
   font-weight: 500;
 }
 
 .project_video {
   border-radius: inherit;
   max-width: 28vw;
-  max-height: 70vh;
+  max-height: 56vh;
+  display: flex;
+  flex-direction: flex-start;
+}
+
+.project_vertical_double {
+  width: 100%;
+  max-width: 28vw;
+  height: 100%;
+  max-height: 56vh;
+  border-radius: inherit;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.project_vertical_double video {
+  transition: all 0.4s ease;
+}
+
+.project_vertical_double video:first-of-type {
+  filter: brightness(0.75);
+}
+
+.project_vertical_double video:last-of-type {
+  box-shadow: #0000005a 2px 2px 10px;
+}
+
+.project_vertical_double video:hover {
+  z-index: 1;
+  filter: none;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: #0000005a 2px 2px 10px;
+}
+
+.project_vertical_double video + video {
+  position: absolute;
+  right: 38%;
+  top: 2%;
 }
 
 .project_video > video,
-.project_video > iframe {
-  width: inherit;
-  height: inherit;
+.project_video > iframe,
+.project_vertical_double > video,
+.project_vertical_double > iframe {
   max-width: inherit;
   max-height: inherit;
   border-radius: inherit;
-  object-fit: contain;
+  object-fit: cover;
+  border: hsl(from var(--text-color) h s calc(l + 20)) 2px solid;
 }
 
 .grid {
@@ -1565,6 +1681,28 @@ footer * {
 
 /* 
 
+PARAMETRES CLASS
+
+*/
+
+.relative {
+  position: relative;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.mobile_only {
+  display: none;
+}
+
+.inline {
+  display: inline;
+}
+
+/* 
+
 CSS : RESPONSIVE DESIGN
 
 */
@@ -1805,6 +1943,7 @@ CSS : MOBILE + TABLETTES
     max-width: 100%;
     max-height: 100%;
     margin-bottom: 0.4em;
+    aspect-ratio: 1/1;
   }
 
   .grid {
