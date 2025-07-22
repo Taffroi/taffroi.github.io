@@ -344,7 +344,7 @@ hr {
 }
 
 .bs_text.bs_text.external_link {
-  margin-right: 0.9em;
+  margin-right: 1.1em;
 }
 
 .bs_text.external_link::after {
@@ -843,7 +843,7 @@ main > .button {
 }
 
 .slider > h1:first-child {
-  animation: slider_wrapper 8s cubic-bezier(0.34, 0, 0.21, 1.35) 1.5s infinite;
+  animation: slider_wrapper 11s cubic-bezier(0.34, 0, 0.21, 1.35) 1.5s infinite;
   animation-delay: 2s;
 }
 
@@ -1197,7 +1197,7 @@ p {
 }
 
 .project_vertical_double video:first-of-type {
-  filter: brightness(0.75);
+  filter: brightness(0.7) blur(1.5px);
 }
 
 .project_vertical_double video:last-of-type {
