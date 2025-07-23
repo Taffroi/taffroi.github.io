@@ -1181,6 +1181,11 @@ p {
   flex-direction: flex-start;
 }
 
+.project_video.widescreen {
+  max-width: 28vw;
+  max-height: 38vh;
+}
+
 .project_vertical_double {
   width: 100%;
   max-width: 28vw;
@@ -1197,7 +1202,7 @@ p {
 }
 
 .project_vertical_double video:first-of-type {
-  filter: brightness(0.7) blur(1.5px);
+  filter: brightness(0.7) blur(1.2px);
 }
 
 .project_vertical_double video:last-of-type {
