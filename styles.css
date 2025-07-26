@@ -777,7 +777,7 @@ main > .button {
 }
 
 .text_fill.scroll_show {
-  animation: 1.4s cubic-bezier(0.18, 0, 0.225, 0.995) 0.6s 1 both text_fill_anim;
+  animation: 1.4s cubic-bezier(0.18, 0, 0.225, 0.995) 0.5s 1 both text_fill_anim;
 }
 
 .text_fill.white {
@@ -927,6 +927,12 @@ u {
   display: flex;
   gap: 5%;
   justify-content: center;
+}
+
+.section_highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section_highlight img {
