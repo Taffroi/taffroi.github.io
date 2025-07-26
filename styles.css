@@ -69,7 +69,8 @@ h6 {
   line-height: 1.1em;
 }
 
-.scroll_hidden {
+.scroll_hidden > *,
+.scroll_hidden.scroll_self {
   opacity: 0;
   transition: all 0.7s;
   filter: blur(2.4px);
@@ -82,10 +83,23 @@ h6 {
   }
 }
 
-.scroll_show {
+.scroll_show > *,
+.scroll_show.scroll_self {
   opacity: 1;
   filter: blur(0px);
   translate: 0 0;
+}
+
+.scroll_hidden > *:nth-child(1) {
+  transition-delay: 50ms;
+}
+
+.scroll_hidden > *:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.scroll_hidden > *:nth-child(3) {
+  transition-delay: 450ms;
 }
 
 a {
@@ -133,47 +147,6 @@ hr {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-}
-
-.wave {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.wave svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 80px;
-}
-
-.wave.bottom {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.wave.bottom svg {
-  position: relative;
-  display: block;
-  width: calc(150% + 1.3px);
-  height: 60px;
-}
-
-.wave .shape-fill {
-  fill: var(--base-color);
-}
-
-.wave .shape-fill.dark {
-  fill: var(--text-color);
 }
 
 .btn_wrapper {
@@ -260,21 +233,20 @@ hr {
 }
 
 .bp_hover {
-  width: 4%;
+  width: 30px;
   aspect-ratio: 1/1;
-  background-color: #ffffff;
   position: absolute;
-  left: 44%;
-  top: 48%;
-  transform: translateY(2em) scale(1);
-  mask: radial-gradient(5px at 5px 5px, #0000 99.9%, #000) -5px -5px;
-  transition: all 0.2s ease-out;
+  transform: scale(0.001);
+  transition: all 0.25s ease-out;
   z-index: -1;
-  border-radius: 50%;
+  left: 46%;
+  top: 50%;
+  transform-origin: 50% 48%;
 }
 
 .btn_primary:hover .bp_hover {
-  transform: scale(56);
+  transform: scale(24);
+  fill: #000;
 }
 
 .btn_primary:hover .bp_text {
@@ -792,13 +764,20 @@ main > .button {
 }
 
 .text_fill {
-  background: linear-gradient(90deg, #bcb3a1 0 50%, transparent 50% 100%);
+  background: linear-gradient(
+    90deg,
+    hsl(from var(--text-color) h s calc(l + 30)) 0 50%,
+    transparent 50% 100%
+  );
   background-size: 200% 100%;
   background-clip: text;
   color: transparent;
   background-position-x: 0%;
   line-height: 1.22em;
-  animation: 1.2s ease 0.5s 1 both text_fill_anim;
+}
+
+.text_fill.scroll_show {
+  animation: 1.4s cubic-bezier(0.18, 0, 0.225, 0.995) 0.6s 1 both text_fill_anim;
 }
 
 .text_fill.white {
@@ -806,7 +785,7 @@ main > .button {
 }
 
 .text_fill.accent {
-  background-color: hsl(from var(--accent-color) h calc(s + 20) calc(l));
+  background-color: hsl(from var(--accent-color) h calc(s + 30) calc(l));
 }
 
 .text_fill.dark {
@@ -1083,7 +1062,7 @@ u {
   align-items: flex-start;
   position: relative;
   border-radius: inherit;
-  gap: 12px;
+  gap: 16px;
   padding: 4% 0 4% 2%;
 }
 
@@ -1157,7 +1136,6 @@ p {
   justify-content: flex-start;
   align-items: center;
   gap: 0.8em;
-  margin-bottom: 0.8em;
 }
 
 .category {
@@ -1790,7 +1768,8 @@ CSS : MOBILE + TABLETTES
   }
 
   p,
-  li {
+  li,
+  a {
     font-size: 1rem;
   }
 
@@ -1818,6 +1797,11 @@ CSS : MOBILE + TABLETTES
     font-size: 12px;
   }
 
+  hr {
+    width: 90%;
+    margin: 16px 0;
+  }
+
   .mobile_only {
     display: initial;
   }
@@ -1826,14 +1810,9 @@ CSS : MOBILE + TABLETTES
     padding: 8px 26px 16px 19px; /* code pourri pour contourner l'icône mal positionnée */
   }
 
-  .wave svg {
-    width: calc(150% + 1.3px);
-    height: 20px;
-  }
-
-  .wave.bottom svg {
-    width: calc(150% + 1.3px);
-    height: 20px;
+  .wave {
+    height: 32px;
+    width: 140%;
   }
 
   .title {
@@ -1984,8 +1963,33 @@ CSS : MOBILE + TABLETTES
     justify-content: flex-end;
     align-items: center;
     gap: 32px;
-    border-radius: 32px;
+    border-radius: 24px;
     padding: 2% 3%;
+  }
+
+  .project_info {
+    padding: 4% 1%;
+    gap: 12px;
+  }
+
+  .project_info > svg {
+    width: 1.6rem;
+  }
+
+  .project_date {
+    font-size: 0.8rem;
+  }
+
+  .project_client {
+    font-size: 0.8rem;
+  }
+
+  .project_title {
+    margin-left: 0;
+  }
+
+  .project_title::before {
+    content: none;
   }
 
   .project_info {
@@ -1997,6 +2001,10 @@ CSS : MOBILE + TABLETTES
   .project_category {
     justify-content: center;
     align-items: center;
+  }
+
+  .category {
+    font-size: 0.8rem;
   }
 
   .project_description {
@@ -2013,11 +2021,6 @@ CSS : MOBILE + TABLETTES
     display: inline-block;
     line-height: 1em;
     font-weight: 500;
-  }
-
-  .project_video,
-  .project_vertical_double {
-    margin-bottom: 0.4em;
   }
 
   .project_video {
@@ -2139,10 +2142,6 @@ CSS : MOBILE + TABLETTES
     align-items: center;
     padding: 12px 3%;
     gap: 8px;
-  }
-
-  .category {
-    font-size: 0.9em;
   }
 
   .div_row {
