@@ -6,6 +6,11 @@ window.addEventListener("scroll", () => {
   } else {
     nav.style.top = 0;
   }
+  if (window.scrollY == 0) {
+    nav.classList.add("top");
+  } else {
+    nav.classList.remove("top");
+  }
 
   lastScrollY = window.scrollY;
 });
