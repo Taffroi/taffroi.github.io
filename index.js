@@ -6,7 +6,7 @@ window.addEventListener("scroll", () => {
   } else {
     nav.style.top = 0;
   }
-  if (window.scrollY == 0) {
+  if (window.scrollY <= 120) {
     nav.classList.add("top");
   } else {
     nav.classList.remove("top");
