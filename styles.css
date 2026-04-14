@@ -1885,6 +1885,11 @@ CSS : MOBILE + TABLETTES
     margin: 8px 0;
   }
 
+  .slider h1 {
+    transform: translateY(-0.1em);
+    /* color: #000 */
+  }
+
   .mobile_only {
     display: initial;
   }
@@ -1955,6 +1960,14 @@ CSS : MOBILE + TABLETTES
 
   .bnp_text {
     font-size: 1rem;
+  }
+
+  .btn_wrapper {
+    width: 100%;
+  }
+
+  .btn_wrapper a {
+    justify-content: center;
   }
 
   main > section {
