@@ -1259,10 +1259,12 @@ p {
 
 .project_image {
   border-radius: inherit;
-  max-width: 28vw;
+  max-width: calc(45%);
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: center;
+  width: 100%;
 }
 
 .project_image img {
@@ -1270,6 +1272,7 @@ p {
   filter: drop-shadow(hsl(from var(--text-color) h s l / 0.2) 4px 4px 8px);
   border-radius: 8px;
   max-height: 60vh;
+  width: min(100%);
 }
 
 .project_video {
